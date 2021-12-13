@@ -47,7 +47,8 @@ def RSA(p:int, q:int, msg:str):
 
 def calculate_e(phi: int): 
     # Calculate the public key based on phi(n)
-    # e must meet the conditions 1 < e < phi(n) and coprime to phi(n)
+    # e must meet the conditions 1 < e < phi(n) 
+    # and coprime to phi(n)
 
     e = 2
     while e < phi: 
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     print
     p = int(input("Input a p value "))
     q = int(input("Input a q value "))
-    msg = input("Enter a message you would like to be encrypted/decrypted: ")
+    msg = input("Enter a message: ")
 
     cypher_text, plain_text = RSA(p, q, msg)
 
